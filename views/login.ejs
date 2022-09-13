@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FREEKICKNOW</title>
+  </head>
+  <body>
+
+    <h3>LOGIN PAGE</h3>
+
+      <% if(message != '') { %>
+        <h6 style="color:green"><%= message %></h6>
+      <% } %>
+
+      <% if(error_msg != '') { %>
+        <h6 style="color:red"><%= error_msg %></h6>
+      <% } %>
+
+    <form class="" action="/login" method="post">
+      <p>Username: <input type="text" name="username" value=""></p>
+      <p>Password: <input type="password" name="password" value=""></p>
+      <input type="submit" name="" value="Click to Login">
+    </form>
+
+    <hr>
+    <a href="/login"> Login</a>
+    <a href="/signup"> Signup</a>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FREEKICKNOW</title>
+  </head>
+  <body>
+
+    <h1> Signup Page</h1>
+
+    <% if(typeof(error) != 'undefined') { %>
+      <% error.forEach(function(err) { %>
+        <h6 style="color:red"><%= err.msg %></h6>
+      <% }) %>
+    <% } %>
+
+    <form class="" action="/signup" method="post" enctype="multipart/form-data">
+      <p>Firstname: <input type="text" name="fn" value="<%= typeof fn != 'undefined'? fn : ''  %>"></p>
+      <p>Lastname: <input type="text" name="ln" value="<%= typeof ln != 'undefined' ? ln : '' %>"></p>
+      <p>Email: <input type="mail" name="email" value="<%= typeof email != 'undefined' ? email : '' %>"></p>
+      <p>Username: <input type="text" name="username" value="<%= typeof username != 'undefined' ? username : '' %>"></p>
+      <p>Password: <input type="text" name="pass1" value="<%= typeof pass1 != 'undefined' ? pass1 : '' %>"></p>
+      <p>Confirm Password: <input type="text" name="pass2" value="<%= typeof pass2 != 'undefined' ? pass2 : '' %>"></p>
+      <p>Upload a Profile Picture: <input type="file" name="image"></p>
+
+      <input type="submit" name="" value="Register">
+    </form>
+
+    <hr>
+    <a href="/login"> Login</a>
+    <a href="/signup"> Signup</a>
+
+  </body>
+</html>
